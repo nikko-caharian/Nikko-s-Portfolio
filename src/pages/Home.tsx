@@ -209,8 +209,7 @@ export default function Home() {
           {[
             { icon: <Scale size={24} className="text-gold" />, title: "Policy & Compliance Review", desc: "Legal sensibility honed at the Office of the President and sharpened by a Juris Doctor in progress at San Beda College Alabang School of Law. I've reviewed official documents, inter-agency correspondence, and legislative materials for regulatory alignment and institutional soundness — where a missed detail isn't just an error, it's a liability." },
             { icon: <Cpu size={24} className="text-gold" />, title: "AI-Powered Productivity", desc: "Certified in Google AI Essentials and fluent across Claude, Gemini, and the Microsoft 365 and Google Workspace ecosystems. I don't use AI to replace thinking — I use it to compress timelines, eliminate busywork, and deliver outputs that used to take days in hours." },
-            { icon: <Briefcase size={24} className="text-gold" />, title: "Records Administration", desc: "I've evaluated and fulfilled thousands of complex data requests under strict confidentiality standards, applying rigorous quality control to prevent unauthorized disclosure of sensitive information. In environments where data integrity is non-negotiable, I've never had a breach — and I intend to keep it that way.
-" }
+            { icon: <Briefcase size={24} className="text-gold" />, title: "Records Administration", desc: "I've evaluated and fulfilled thousands of complex data requests under strict confidentiality standards, applying rigorous quality control to prevent unauthorized disclosure of sensitive information. In environments where data integrity is non-negotiable, I've never had a breach — and I intend to keep it that way." }
           ].map((item, i) => (
             <motion.div 
               key={i}
@@ -354,8 +353,7 @@ export default function Home() {
               title: "Institutional Resilience under Pressure",
               challenge: "A global pandemic cannot pause the Office of the President. Executive briefings, assistance databases, and close-in staff operations had to continue without interruption — under conditions no contingency plan fully anticipated.",
               action: "I assisted in packaging the Presidential Daily Briefer for the Technical Close-in Team, ensuring principals received accurate, timely intelligence even as the situation on the ground shifted daily.",
-              result: "Mission-critical databases for financial and medical assistance remained operational throughout the crisis — serving Filipinos at the moment they needed government the most.
-",
+              result: "Mission-critical databases for financial and medical assistance remained operational throughout the crisis — serving Filipinos at the moment they needed government the most.",
               metric: "Zero",
               metricLabel: "Briefings Missed"
             }
