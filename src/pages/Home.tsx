@@ -88,9 +88,9 @@ export default function Home() {
       </section>
 
       {/* Stats Bar */}
-      <div className="bg-black text-white px-[5vw] py-10 grid grid-cols-2 gap-8 text-center">
+      <div className="bg-black text-white px-[5vw] py-10 grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
         {[
-          { label: "Paper Reduction Achieved", val: "66%" },
+          { label: "English Proficiency", val: "C2" },
           { label: "Public Service Experience", val: "9 Years" },
           { label: "Remote-Ready", val: "100%" },
           { label: "Audience Managed", val: "4M+" }
