@@ -72,9 +72,9 @@ export default function About() {
               period="Jul 2024 – Mar 2026"
               location="Pasay City (Remote)"
               description={[
-                "Managed digital strategy and content management for a social media audience exceeding 4 million followers.",
-                "Reviewed and packaged official speeches, talking points, and inter-agency correspondence at the highest institutional standards.",
-                "Contributed to strategic communications that supported a top-ranked finish in the May 2025 national elections."
+                "Managed the Senator's social media presence across platforms with over 4 million followers, driving daily content planning, audience engagement, and trend monitoring that contributed to his top-ranking finish in the May 2025 national elections.",
+                "Compiled and delivered briefing materials, talking points, and speeches for all official functions, ensuring the Senator was consistently prepared and well-represented in every engagement.",
+                "Served as a frontline coordinator for constituent assistance, collecting case details from individuals seeking medical and other support and endorsing them to the Constituency Office for processing and follow-through."
               ]}
             />
             <ExperienceItem 
@@ -83,9 +83,9 @@ export default function About() {
               period="Jan 2024 – May 2024"
               location="Malacañang, Manila"
               description={[
-                "Co-developed the operational framework for the Presidential Help Desk, formalized through Executive Order No. 20 (s. 2023).",
-                "Streamlined the processing of over 77,700 referrals by revamping workflows and modernizing templates, achieving zero backlog.",
-                "Managed high-level technical coordination between national agencies."
+                "Served as Chief of Staff to the Head of Office, managing day-to-day administrative operations including scheduling, inter-agency correspondence, workflow oversight, and the preparation of briefers, presentations, and referral letters.",
+                "Ensured regulatory compliance and institutional accountability by reviewing memoranda and correspondence against applicable laws and regulations, and preparing key planning documents including performance scorecards, procurement plans, and the office's comprehensive annual report to the Executive Secretary.",
+                "Supported the office's organizational restructuring in alignment with administration priorities, contributing to streamlined operations and institutional transformation."
               ]}
             />
             <ExperienceItem 
@@ -94,9 +94,9 @@ export default function About() {
               period="Mar 2022 – Dec 2023"
               location="Malacañang, Manila"
               description={[
-                "Spearheaded the digital transition of the PACe Referral System, achieving a 66% reduction in paper consumption.",
-                "Managed internal databases for high-volume social service interventions.",
-                "Ensured strict data confidentiality and adherence to security protocols."
+                "Spearheaded the transition to a fully paperless data management system, overhauling the PACe Referral System's records infrastructure, process flows, and official forms into a comprehensive digitized setup that achieved a 66% reduction in paper consumption and improved operational efficiency, data accessibility, and reporting capacity.",
+                "Served as Action Officer and primary public-facing contact across walk-in, email, courier, and phone channels, evaluating concerns firsthand, gathering case details, and drafting referral letters to appropriate agencies for the Head of Office's approval.",
+                "Assisted in developing the Presidential Help Desk, a crisis assistance program formally institutionalized through Executive Order No. 20 (s. 2023) signed by President Marcos, delivering direct financial and medical assistance to Filipinos in need."
               ]}
             />
             <ExperienceItem 
@@ -105,9 +105,9 @@ export default function About() {
               period="Jul 2019 – Mar 2022"
               location="Malacañang, Manila"
               description={[
-                "Assisted in packaging high-stakes briefing materials for the principals.",
-                "Coordinated with relevant government agencies in support of relief operations, contributing to a whole-of-government approach in delivering public services.",
-                "Assisted in packaging mission-critical information for executive decision-making."
+                "Served as close-in staff to the Special Assistant to the President, managing calendar schedules, coordinating official engagements, and liaising with internal and external parties, including serving as part of the Official Philippine Presidential Delegation on state visits to Malaysia and Beijing, China.",
+                "Conducted end-to-end case management and due diligence for medical and financial assistance requests, drafting policy-compliant Completed Staff Work memoranda ready for approval without further revision, and coordinating with relevant government agencies in support of whole-of-government relief operations.",
+                "Built and maintained an office database using Google Workspace and Microsoft 365 for efficient records management."
               ]}
             />
             <ExperienceItem 
@@ -116,9 +116,9 @@ export default function About() {
               period="May 2017 – Jun 2019"
               location="Davao City"
               description={[
-                "Maintained internal databases for high-volume financial and medical assistance requests.",
-                "Supported local operations and technical coordination for presidential social services in the region.",
-                "Enforced strict data security protocols for sensitive citizen records."
+                "Supported official engagements and field operations across Mindanao, assisting in logistics, documentation, and stakeholder coordination.",
+                "Performed data entry and digitization of manual records into the office database.",
+                "Promoted to close-in presidential staff within one year based on demonstrated reliability, initiative, and attention to detail."
               ]}
             />
             <ExperienceItem 
@@ -127,6 +127,7 @@ export default function About() {
               period="Oct 2016 – Mar 2017"
               location="Davao City"
               description={[
+                "Contributed to the development of the Business Permit and Licensing System (BPLS) as a capstone project, subsequently adopted by the Regional Office.",
                 "Assisted in administrative tasks and data entry for regional trade programs.",
                 "Supported the coordination of local business seminars and trade fairs."
               ]}
