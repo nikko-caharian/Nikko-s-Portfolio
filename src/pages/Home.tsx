@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Stats Bar */}
-      <div className="bg-black text-white px-[5vw] py-10 flex flex-wrap justify-center gap-12 text-center">
+      <div className="bg-black text-white px-[5vw] py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {[
           { label: "English Proficiency", val: "C2" },
           { label: "Public Service Experience", val: "9 Years" },
