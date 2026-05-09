@@ -128,7 +128,7 @@ export default function Home() {
             </div>
             <h3 className="font-display text-2xl text-black tracking-tight mb-2.5">Executive Support</h3>
             <p className="text-[0.9rem] font-light text-warm-gray-600 leading-relaxed mb-6">
-              Calendar orchestration, stakeholder correspondence, briefing preparation, and principal management at the level of the Office of the President. I've served close-in staff to a senator and handled classified schedules — your executive calendar is in capable hands.
+              From the halls of Malacañang to the Senate floor, I've managed the schedules, correspondence, and briefings of principals who operate where decisions carry real weight. Close-in staff work means anticipating needs before they're voiced, protecting a principal's time fiercely, and keeping sensitive schedules airtight. Your executive calendar doesn't just get managed — it gets guarded.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Calendar Management", "Stakeholder Liaison", "Briefing Decks", "Travel Coordination", "Inbox Zero Strategy"].map(tag => (
@@ -173,7 +173,7 @@ export default function Home() {
             </div>
             <h3 className="font-display text-2xl text-black tracking-tight mb-2.5">Systems & Process Design</h3>
             <p className="text-[0.9rem] font-light text-warm-gray-600 leading-relaxed mb-6">
-              I don't just follow systems — I build them. Streamlined the processing of 77,700 referrals by revamping workflows and modernizing templates, achieving zero backlog.
+              I don't just follow systems — I build them. At the Presidential Action Center, I revamped workflows and modernized templates that streamlined the processing of 77,700 referrals, bringing the office to zero backlog. If a process is broken, I don't wait to be asked. I fix it.
             </p>
             <div className="flex flex-wrap gap-2">
               {["SOPs", "Process Mapping", "Digital Transformation"].map(tag => (
@@ -194,7 +194,7 @@ export default function Home() {
             </div>
             <h3 className="font-display text-2xl text-black tracking-tight mb-2.5">Communications & Content</h3>
             <p className="text-[0.9rem] font-light text-warm-gray-600 leading-relaxed mb-6">
-              Managed social media and content for 4M+ followers for Senator Bong Go. Reviewed and packaged official speeches, talking points, and inter-agency correspondence at the highest institutional standard.
+              I've reviewed and packaged official speeches, talking points, and inter-agency correspondence for one of the Philippines' most visible public officials — Senator Christopher Go, whose platforms reach more than 4 million followers. Every word that leaves a principal's office reflects on them. I treat it that way.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Social Media Management", "Content Strategy", "Editorial Review"].map(tag => (
@@ -207,9 +207,10 @@ export default function Home() {
 
           {/* Smaller Cards */}
           {[
-            { icon: <Scale size={24} className="text-gold" />, title: "Policy & Compliance Review", desc: "Legal sensibility honed at the Senate and sharpened by a Juris Doctor in progress. I review documents for regulatory alignment." },
-            { icon: <Cpu size={24} className="text-gold" />, title: "AI-Powered Productivity", desc: "Certified in Claude AI, Google Gemini, and AI Essentials. I deploy the right tools to compress timelines." },
-            { icon: <Briefcase size={24} className="text-gold" />, title: "Records Administration", desc: "Evaluated and fulfilled thousands of complex data requests, applying rigorous quality control to prevent the unauthorized disclosure of sensitive information." }
+            { icon: <Scale size={24} className="text-gold" />, title: "Policy & Compliance Review", desc: "Legal sensibility honed at the Office of the President and sharpened by a Juris Doctor in progress at San Beda College Alabang School of Law. I've reviewed official documents, inter-agency correspondence, and legislative materials for regulatory alignment and institutional soundness — where a missed detail isn't just an error, it's a liability." },
+            { icon: <Cpu size={24} className="text-gold" />, title: "AI-Powered Productivity", desc: "Certified in Google AI Essentials and fluent across Claude, Gemini, and the Microsoft 365 and Google Workspace ecosystems. I don't use AI to replace thinking — I use it to compress timelines, eliminate busywork, and deliver outputs that used to take days in hours." },
+            { icon: <Briefcase size={24} className="text-gold" />, title: "Records Administration", desc: "I've evaluated and fulfilled thousands of complex data requests under strict confidentiality standards, applying rigorous quality control to prevent unauthorized disclosure of sensitive information. In environments where data integrity is non-negotiable, I've never had a breach — and I intend to keep it that way.
+" }
           ].map((item, i) => (
             <motion.div 
               key={i}
@@ -237,7 +238,7 @@ export default function Home() {
               Built for principals who can't afford a second attempt.
             </motion.h2>
             <motion.p {...fadeIn} className="mt-4 text-[1.05rem] font-light text-warm-gray-600 max-w-[540px] leading-relaxed">
-              My work has appeared in executive orders, national legislation, and presidential briefings. That instills a particular standard — one I bring to every client engagement.
+              Nearly a decade inside Philippine governance taught me one thing above all — the work either meets the standard or it doesn't. No exceptions, no shortcuts, no second drafts when it counts. I bring that same accountability to every engagement.
             </motion.p>
 
             <motion.div 
@@ -324,36 +325,37 @@ export default function Home() {
             {
               label: "Case Study 01 — Presidential Action Center",
               title: "Building a Crisis Lifeline from the Ground Up",
-              challenge: "Citizens in medical and financial distress needed a mechanism that bypassed bureaucratic delays.",
-              action: "Co-developed the Presidential Help Desk, mapping intake flows formalized through Executive Order No. 20 (s. 2023).",
-              result: "Delivered direct aid to thousands. Now a cornerstone social service program of the Marcos administration.",
+              challenge: "Citizens in medical and financial distress needed help that couldn't wait for bureaucratic clearance. They needed funds, fast — and no mechanism existed to get it to them directly.",
+              action: "I co-developed the Presidential Help Desk from the ground up — designing intake flows, building the database, creating the forms, and helping shape the policy framework that formalized the program through Executive Order No. 20 (s. 2023). From concept to operational system, I was there for every layer.",
+              result: "Direct aid delivered to thousands of Filipinos in crisis. The Presidential Help Desk is now a cornerstone social service program of the Marcos administration.",
               metric: "EO 20",
               metricLabel: "Institutionalized"
             },
             {
-              label: "Case Study 02 — Paperless Data Management",
+              label: "Case Study 02 — Presidential Action Center",
               title: "66% Print Reduction Without Missing a Case",
-              challenge: "Office averaged 120,000 prints/month — a bottleneck slowing case resolution.",
-              action: "Implemented a Paperless Referral System with modernized templates.",
-              result: "Reduced prints by 66%. Real-time processing under 1h. Zero backlog across 77,700 referrals.",
-              metric: "77,700",
-              metricLabel: "Referrals"
+              challenge: "The Presidential Action Center was averaging 120,000 prints per month — a bottleneck that was slowing case resolution and burying staff in paper.",
+              action: "In 2023, I implemented a Paperless Referral System at PACE, modernizing templates and redesigning the workflow end to end.",
+              result: "Prints reduced by 66%. Real-time processing under one hour. Zero backlog across 77,700 referrals — documented in the 2023 PACE Annual Report.",
+              metric: "Mother Earth",
+              metricLabel: "Saved"
             },
             {
               label: "Case Study 03 — Senate of the Philippines",
-              title: "4M-Follower Digital Strategy",
-              challenge: "Office required a communications function capable of both real-time engagement and institutional accuracy.",
-              action: "Managed daily content strategy, social analytics, and cross-team coordination.",
-              result: "Maintained a 4M+ audience. Contributed to a top-ranked finish in national elections.",
+              title: "The Quiet Engine Behind a Senator's Public Presence",
+              challenge: "Managing communications for a sitting senator means operating at two speeds simultaneously — real-time public engagement and institutionally precise official messaging. There is no margin for error on either front.",
+              action: "I managed daily content strategy, social media analytics, and cross-team coordination for Senator Christopher Go's digital platforms — keeping messaging consistent, timely, and on-brand across every channel.",
+              result: "Maintained and grew a 4M+ audience. Contributed to a top-ranked finish in the 2022 national elections — one of the most competitive senatorial races in recent Philippine history.",
               metric: "4M+",
               metricLabel: "Followers Managed"
             },
             {
               label: "Case Study 04 — COVID-19 Response",
               title: "Institutional Resilience under Pressure",
-              challenge: "Required Maintaining uninterrupted executive briefings under pandemic conditions.",
-              action: "Assisted in packaging the Presidential Daily Briefer for the Technical Close-in Team.",
-              result: "Maintained mission-critical databases for financial/medical assistance under high pressure.",
+              challenge: "A global pandemic cannot pause the Office of the President. Executive briefings, assistance databases, and close-in staff operations had to continue without interruption — under conditions no contingency plan fully anticipated.",
+              action: "I assisted in packaging the Presidential Daily Briefer for the Technical Close-in Team, ensuring principals received accurate, timely intelligence even as the situation on the ground shifted daily.",
+              result: "Mission-critical databases for financial and medical assistance remained operational throughout the crisis — serving Filipinos at the moment they needed government the most.
+",
               metric: "Zero",
               metricLabel: "Briefings Missed"
             }
