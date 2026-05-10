@@ -67,10 +67,10 @@ export default function About() {
           </motion.h2>
           <div className="space-y-12">
             <ExperienceItem 
-              title="Consultant / Executive Assistant (Remote) – Communications & Admin"
+              title="Communications Consultant"
               org="Senate of the Philippines – Office of Senator Christopher Lawrence Go"
               period="Jul 2024 – Mar 2026"
-              location="Pasay City (Remote)"
+              location="Pasay City (Hybrid)"
               description={[
                 "Managed the Senator's social media presence across platforms with over 4 million followers, driving daily content planning, audience engagement, and trend monitoring that contributed to his top-ranking finish in the May 2025 national elections.",
                 "Compiled and delivered briefing materials, talking points, and speeches for all official functions, ensuring the Senator was consistently prepared and well-represented in every engagement.",
@@ -78,7 +78,7 @@ export default function About() {
               ]}
             />
             <ExperienceItem 
-              title="Chief of Staff to the Head of Office – Office of the Director"
+              title="Chief of Staff to the Head of Office"
               org="Office of the President – Presidential Action Center"
               period="Jan 2024 – May 2024"
               location="Malacañang, Manila"
@@ -89,7 +89,7 @@ export default function About() {
               ]}
             />
             <ExperienceItem 
-              title="Administrative & Data Management Officer – Special Projects"
+              title="Administrative & Data Management Officer"
               org="Office of the President – Presidential Action Center"
               period="Mar 2022 – Dec 2023"
               location="Malacañang, Manila"
@@ -100,7 +100,7 @@ export default function About() {
               ]}
             />
             <ExperienceItem 
-              title="Executive & Personal Staff – Close-in Support"
+              title="Close-in Executive Staff"
               org="Office of the President – Office of the Special Assistant to the President"
               period="Jul 2019 – Mar 2022"
               location="Malacañang, Manila"
@@ -111,7 +111,7 @@ export default function About() {
               ]}
             />
             <ExperienceItem 
-              title="Staff (Job Order) – Davao Satellite Office"
+              title="Field Operations Staff & Records Digitization Officer"
               org="Office of the President – Office of the Special Assistant to the President"
               period="May 2017 – Jun 2019"
               location="Davao City"
@@ -122,7 +122,7 @@ export default function About() {
               ]}
             />
             <ExperienceItem 
-              title="Intern"
+              title="Systems Development Intern"
               org="Department of Trade and Industry – Regional Office XI"
               period="Oct 2016 – Mar 2017"
               location="Davao City"
