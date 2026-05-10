@@ -346,7 +346,7 @@ export default function Home() {
               title: "The Quiet Engine Behind a Senator's Public Presence",
               challenge: "Managing communications for a sitting senator means operating at two speeds simultaneously — real-time public engagement and institutionally precise official messaging. There is no margin for error on either front.",
               action: "I managed daily content strategy, social media analytics, and cross-team coordination for Senator Christopher Go's digital platforms — keeping messaging consistent, timely, and on-brand across every channel.",
-              result: "Maintained and grew a 4M+ audience. Contributed to a top-ranked finish in the 2022 national elections — one of the most competitive senatorial races in recent Philippine history.",
+              result: "Maintained and grew a 4M+ audience. Contributed to a top-ranked finish in the 2025 national elections — one of the most competitive senatorial races in recent Philippine history.",
               metric: "4M+",
               metricLabel: "Followers Managed"
             },
