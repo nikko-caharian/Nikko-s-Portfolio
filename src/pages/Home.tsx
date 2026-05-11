@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <h3 className="font-display text-2xl text-black tracking-tight mb-2.5">Executive Support</h3>
             <p className="text-[0.9rem] font-light text-warm-gray-600 leading-relaxed mb-6">
-              From the halls of Malacañang to the Senate floor, I've managed the schedules, correspondence, and briefings of principals who operate where decisions carry real weight. Close-in staff work means anticipating needs before they're voiced, protecting a principal's time fiercely, and keeping sensitive schedules airtight. Your executive calendar doesn't just get managed — it gets guarded.
+              From the halls of Malacañang to the Senate floor, I've managed the schedules, correspondence, and briefings of principals who operate where decisions carry real weight. Executive staff work means anticipating needs before they're voiced, protecting a principal's time fiercely, and keeping sensitive schedules airtight. Your executive calendar doesn't just get managed — it gets guarded.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Calendar Management", "Stakeholder Liaison", "Briefing Decks", "Travel Coordination", "Inbox Zero Strategy"].map(tag => (
@@ -353,7 +353,7 @@ export default function Home() {
             {
               label: "Case Study 04 — COVID-19 Response",
               title: "Institutional Resilience under Pressure",
-              challenge: "A global pandemic cannot pause the Office of the President. Executive briefings, assistance databases, and close-in staff operations had to continue without interruption — under conditions no contingency plan fully anticipated.",
+              challenge: "A global pandemic cannot pause the Office of the President. Executive briefings, assistance databases, and executive staff operations had to continue without interruption — under conditions no contingency plan fully anticipated.",
               action: "I assisted in packaging the Presidential Daily Briefer for the Technical Close-in Team, ensuring principals received accurate, timely intelligence even as the situation on the ground shifted daily.",
               result: "Mission-critical databases for financial and medical assistance remained operational throughout the crisis — serving Filipinos at the moment they needed government the most.",
               metric: "Zero",
