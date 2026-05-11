@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,14 +10,19 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <div className="min-h-screen selection:bg-gold/30">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 h-[68px] flex items-center justify-between px-[5vw] bg-white/80 backdrop-blur-xl border-b border-black/5">
-        <Link className="font-display text-lg tracking-tight" to="/">
-          Cesar Nikko M. Caharian III<span className="text-gold">.</span>
+        <Link className="font-display text-lg tracking-tight" to="/" onClick={closeMenu}>
+          Cesar Nikko M. Caharian III
         </Link>
+
+        {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-8 text-sm tracking-wide">
           {isHome ? (
             <>
@@ -26,24 +31,72 @@ export default function Layout({ children }: LayoutProps) {
               <li><a href="#proof" className="text-warm-gray-600 hover:text-black transition-colors">Work</a></li>
             </>
           ) : (
-             <>
-              <li><Link to="/" className="text-warm-gray-600 hover:text-black transition-colors">Home</Link></li>
-            </>
+            <li><Link to="/" className="text-warm-gray-600 hover:text-black transition-colors">Home</Link></li>
           )}
-          <li><Link to="/about" className={`transition-colors ${location.pathname === "/about" ? "text-gold font-medium" : "text-warm-gray-600 hover:text-black"}`}>About</Link></li>
+          <li>
+            <Link to="/about" className={`transition-colors ${location.pathname === "/about" ? "text-gold font-medium" : "text-warm-gray-600 hover:text-black"}`}>
+              About
+            </Link>
+          </li>
           <li>
             <a href="#contact" className="bg-black text-white px-5 py-2 rounded-full font-medium hover:bg-gold transition-all duration-300">
               Let's Talk
             </a>
           </li>
         </ul>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-warm-gray-100 transition-colors"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-[68px] left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-black/5 px-[5vw] py-6 flex flex-col gap-4 md:hidden shadow-lg"
+          >
+            {isHome ? (
+              <>
+                <a href="#capabilities" onClick={closeMenu} className="text-base text-warm-gray-600 hover:text-black transition-colors py-2 border-b border-warm-gray-100">Capabilities</a>
+                <a href="#why-me" onClick={closeMenu} className="text-base text-warm-gray-600 hover:text-black transition-colors py-2 border-b border-warm-gray-100">Philosophy</a>
+                <a href="#proof" onClick={closeMenu} className="text-base text-warm-gray-600 hover:text-black transition-colors py-2 border-b border-warm-gray-100">Work</a>
+              </>
+            ) : (
+              <Link to="/" onClick={closeMenu} className="text-base text-warm-gray-600 hover:text-black transition-colors py-2 border-b border-warm-gray-100">Home</Link>
+            )}
+            <Link
+              to="/about"
+              onClick={closeMenu}
+              className={`text-base py-2 border-b border-warm-gray-100 transition-colors ${location.pathname === "/about" ? "text-gold font-medium" : "text-warm-gray-600 hover:text-black"}`}
+            >
+              About
+            </Link>
+            
+              href="#contact"
+              onClick={closeMenu}
+              className="mt-2 inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gold transition-all duration-300"
+            >
+              Let's Talk <ArrowRight size={16} />
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main>{children}</main>
 
-      {/* Shared CTA (usually at bottom of pages) */}
+      {/* Shared CTA */}
       <section id="contact" className="bg-white py-32 px-[5vw] flex justify-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -71,7 +124,7 @@ export default function Layout({ children }: LayoutProps) {
       {/* Footer */}
       <footer className="bg-off-white px-[5vw] py-10 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-warm-gray-200">
         <div className="font-display text-base tracking-tight">
-          Cesar Nikko M. Caharian III<span className="text-gold">.</span>
+          Cesar Nikko M. Caharian III
         </div>
         <div className="flex gap-6">
           <Link to="/" className="text-[0.78rem] text-warm-gray-600 hover:text-gold transition-colors">Home</Link>
