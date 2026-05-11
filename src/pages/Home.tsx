@@ -353,11 +353,11 @@ export default function Home() {
             {
               label: "Case Study 04 — COVID-19 Response",
               title: "Institutional Resilience under Pressure",
-              challenge: "A global pandemic cannot pause the Office of the President. Executive briefings, assistance databases, and executive staff operations had to continue without interruption — under conditions no contingency plan fully anticipated.",
-              action: "I assisted in packaging the Presidential Daily Briefer for the Technical Close-in Team, ensuring principals received accurate, timely intelligence even as the situation on the ground shifted daily.",
-              result: "Mission-critical databases for financial and medical assistance remained operational throughout the crisis — serving Filipinos at the moment they needed government the most.",
-              metric: "Zero",
-              metricLabel: "Briefings Missed"
+              challenge: "A global pandemic cannot pause the Office of the President. Executive operations, assistance databases, and briefing workflows had to continue without interruption—under conditions no contingency plan fully anticipated.",
+              action: "I assisted in packaging the Presidential Daily Briefer for the Technical Close-in Team and facilitated the transition of assistance processing to a remote-ready office database using Google Workspace.",
+              result: "Ensured the uninterrupted provision of mission-critical briefing materials for senior officials and the continuous delivery of medical and financial assistance to the public through end-to-end remote case management.",
+              metric: "100%",
+              metricLabel: "Uninterrupted Service"
             }
           ].map((item, i) => (
             <motion.div 
