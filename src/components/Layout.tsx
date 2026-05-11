@@ -86,7 +86,7 @@ export default function Layout({ children }: LayoutProps) {
               onClick={closeMenu}
               className="mt-2 inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gold transition-all duration-300"
             >
-              Let&apos;s Talk <ArrowRight size={16} />
+              {"Let's Talk"} <ArrowRight size={16} />
             </a>
           </motion.div>
         )}
