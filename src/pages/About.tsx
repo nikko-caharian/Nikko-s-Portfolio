@@ -100,12 +100,12 @@ export default function About() {
               ]}
             />
             <ExperienceItem 
-              title="Close-in Executive Staff"
+              title="Executive Support Staff"
               org="Office of the President – Office of the Special Assistant to the President"
               period="Jul 2019 – Mar 2022"
               location="Malacañang, Manila"
               description={[
-                "Served as close-in staff to the Special Assistant to the President, managing calendar schedules, coordinating official engagements, and liaising with internal and external parties, including serving as part of the Official Philippine Presidential Delegation on state visits to Malaysia and Beijing, China.",
+                "Served as executive support staff to the Special Assistant to the President, managing calendar schedules, coordinating official engagements, and liaising with internal and external parties, including serving as part of the Official Philippine Presidential Delegation on state visits to Malaysia and Beijing, China.",
                 "Conducted end-to-end case management and due diligence for medical and financial assistance requests, drafting policy-compliant Completed Staff Work memoranda ready for approval without further revision, and coordinating with relevant government agencies in support of whole-of-government relief operations.",
                 "Built and maintained an office database using Google Workspace and Microsoft 365 for efficient records management."
               ]}
