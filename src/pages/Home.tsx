@@ -151,10 +151,10 @@ export default function Home() {
             </div>
             <h3 className="relative z-10 font-display text-2xl text-gold-light tracking-tight mb-2.5">Data Analytics</h3>
             <p className="relative z-10 text-[0.9rem] font-light text-white/55 leading-relaxed mb-6">
-              Certified by Google. Proficient in SQL, Tableau, and Python basics. I turn raw data into decision-ready reports.
+              Certified by Google. Proficient in SQL, Tableau, Power BI, and Python basics. I turn raw data into decision-ready reports and interactive dashboards.
             </p>
             <div className="relative z-10 flex flex-wrap gap-2">
-              {["SQL", "Tableau", "Google Sheets", "Dashboards"].map(tag => (
+              {["SQL", "Power BI", "Tableau", "Google Sheets", "Dashboards"].map(tag => (
                 <span key={tag} className="text-[0.72rem] font-medium tracking-wide px-3 py-1.5 rounded-full bg-white/10 text-white/70">
                   {tag}
                 </span>
