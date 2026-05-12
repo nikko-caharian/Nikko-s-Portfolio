@@ -285,7 +285,7 @@ export default function Home() {
                   { title: "Order of Lapu-Lapu, Rank of Kamagi", org: "Presidential Award — Office of the President, 2022" },
                   { title: "Google Data Analytics Professional", org: "Google via Coursera, April 2026" },
                   { title: "Six Sigma Principles", org: "Kennesaw State University, April 2026" },
-                  { title: "Google AI Essentials", org: "Google via Coursera, March 2026" },
+                  { title: "Google AI Professional", org: "Google via Coursera, March 2026" },
                   { title: "Strategic & Inclusive Leadership", org: "Johns Hopkins University, March 2026" },
                   { title: "Juris Doctor (In Progress)", org: "San Beda College Alabang - School of Law, Expected 2028" },
                   { title: "Career Service Professional", org: "Civil Service Commission of the Philippines" }
