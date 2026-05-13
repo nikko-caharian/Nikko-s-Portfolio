@@ -156,7 +156,7 @@ export default function Portfolio() {
           <motion.div {...fadeIn} className="mb-12">
             <p className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-3">Awards & Recognition</p>
             <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">Recognized for the work. Not the title.</h2>
-            <p className="mt-4 text-[1rem] font-light text-warm-gray-600 max-w-[480px] leading-relaxed">I did not pursue these. I pursued the Filipinos who needed someone in their corner — showing up with integrity, consistency, and the quiet conviction that genuine public service is its own reward. These are simply what institutions leave behind when they witness that kind of service up close. I am grateful for each one.</p>
+            <p className="mt-4 text-[1rem] font-light text-warm-gray-600 max-w-[720px] leading-relaxed">I did not pursue these. I pursued the work — quietly, consistently, and always in service of the Filipino people. Integrity was never the strategy. It was simply the only way I knew how to serve. These are what institutions leave behind when they witness that kind of dedication up close. I am grateful for each one.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
