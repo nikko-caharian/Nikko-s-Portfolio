@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { Youtube, Music, ExternalLink, Award, ImageOff } from "lucide-react";
+import { Youtube, Music, ExternalLink, Award, ImageOff, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -16,30 +17,42 @@ interface ProjectCardProps {
   links?: { label: string; url: string; icon?: React.ReactNode }[];
   imagePlaceholder?: string;
   image?: string;
+  images?: string[];
   embedVideo?: string;
   dark?: boolean;
 }
 
-function ProjectCard({ category, title, description, tags, links, imagePlaceholder, image, embedVideo, dark }: ProjectCardProps) {
+function ProjectCard({ category, title, description, tags, links, imagePlaceholder, image, images, embedVideo, dark }: ProjectCardProps) {
+  const [current, setCurrent] = useState(0);
+  const allImages = images || (image ? [image] : []);
+
   return (
     <motion.div
       {...fadeIn}
       className={`group rounded-[24px] border overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${dark ? "bg-black border-white/10 hover:border-gold hover:shadow-gold/10" : "bg-white border-warm-gray-200 hover:shadow-black/5"}`}
     >
-      <div className={`w-full h-52 flex items-center justify-center overflow-hidden ${dark ? "bg-white/5" : "bg-warm-gray-100"}`}>
+      <div className={`w-full h-52 flex items-center justify-center overflow-hidden relative ${dark ? "bg-white/5" : "bg-warm-gray-100"}`}>
         {embedVideo ? (
-          <iframe
-            width="100%"
-            height="100%"
-            src={`https://www.youtube.com/embed/${embedVideo}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        ) : image ? (
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+          <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${embedVideo}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
+        ) : allImages.length > 0 ? (
+          <>
+            <img src={allImages[current]} alt={title} className="w-full h-full object-cover transition-all duration-300" />
+            {allImages.length > 1 && (
+              <>
+                <button onClick={() => setCurrent(i => (i - 1 + allImages.length) % allImages.length)} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/80 flex items-center justify-center text-white transition-all">
+                  <ChevronLeft size={16} />
+                </button>
+                <button onClick={() => setCurrent(i => (i + 1) % allImages.length)} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/80 flex items-center justify-center text-white transition-all">
+                  <ChevronRight size={16} />
+                </button>
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                  {allImages.map((_, i) => (
+                    <button key={i} onClick={() => setCurrent(i)} className={`w-1.5 h-1.5 rounded-full transition-all ${i === current ? "bg-white" : "bg-white/40"}`} />
+                  ))}
+                </div>
+              </>
+            )}
+          </>
         ) : imagePlaceholder ? (
           <div className="flex flex-col items-center gap-2 opacity-40">
             <ImageOff size={28} className={dark ? "text-white" : "text-warm-gray-400"} />
@@ -54,9 +67,7 @@ function ProjectCard({ category, title, description, tags, links, imagePlacehold
         <p className={`text-[0.88rem] font-light leading-relaxed mb-5 ${dark ? "text-white/55" : "text-warm-gray-600"}`}>{description}</p>
         <div className="flex flex-wrap gap-2 mb-5">
           {tags.map(tag => (
-            <span key={tag} className={`text-[0.7rem] font-medium tracking-wide px-3 py-1.5 rounded-full ${dark ? "bg-white/10 text-white/60" : "bg-warm-gray-100 text-warm-gray-700"}`}>
-              {tag}
-            </span>
+            <span key={tag} className={`text-[0.7rem] font-medium tracking-wide px-3 py-1.5 rounded-full ${dark ? "bg-white/10 text-white/60" : "bg-warm-gray-100 text-warm-gray-700"}`}>{tag}</span>
           ))}
         </div>
         {links && links.length > 0 && (
@@ -101,15 +112,9 @@ export default function Portfolio() {
     <div className="pt-[68px]">
       <section className="bg-off-white py-24 px-[5vw] border-b border-warm-gray-200">
         <div className="max-w-4xl mx-auto">
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-4">
-            Portfolio
-          </motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-display text-[clamp(2.5rem,6vw,4rem)] leading-[1.1] tracking-tight text-black mb-6">
-            Work that speaks for itself.
-          </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg font-light text-warm-gray-600 max-w-[540px] leading-relaxed">
-            A curated selection of projects, creative work, and credentials spanning public service, data analytics, and content creation.
-          </motion.p>
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-4">Portfolio</motion.p>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-display text-[clamp(2.5rem,6vw,4rem)] leading-[1.1] tracking-tight text-black mb-6">Work that speaks for itself.</motion.h1>
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg font-light text-warm-gray-600 max-w-[540px] leading-relaxed">A curated selection of projects, creative work, and credentials spanning public service, data analytics, and content creation.</motion.p>
         </div>
       </section>
 
@@ -117,9 +122,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeIn} className="mb-12">
             <p className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-3">Creative Work</p>
-            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">
-              Beyond the desk.
-            </h2>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">Beyond the desk.</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -128,7 +131,7 @@ export default function Portfolio() {
               category="Faith & Content Creation"
               title="Five Minutes with God Daily"
               description="A daily meditative prayer podcast and YouTube channel rooted in the Roman Catholic tradition. Each episode is built around the Daily Gospel, crafted in an inclusive-Christian tone to help listeners begin their day in quiet reflection."
-              tags={["Christian", "Bible Reading", "Meditation", "Jesus", "Spirituality"]}
+              tags={["Christian", "Jesus", "Meditation", "Peace", "Spirituality"]}
               embedVideo="5J_daXq7rIM"
               links={[
                 { label: "YouTube", url: "https://www.youtube.com/@5-minutewithGod", icon: <Youtube size={14} /> },
@@ -141,16 +144,10 @@ export default function Portfolio() {
               title="Power BI & Claude Data Dashboards"
               description="Interactive dashboards and data visualizations built using Power BI and Claude AI, demonstrating proficiency in transforming raw datasets into decision-ready reports. Topics span governance metrics, operational analytics, and productivity tracking."
               tags={["Power BI", "Claude AI", "Data Visualization", "Google Sheets", "SQL"]}
-              image="/dashboard-1.png"
+              images={["/dashboard-1.png", "/dashboard-2.png"]}
               links={[]}
             />
           </div>
-
-          <motion.div {...fadeIn} className="mt-6">
-            <div className="rounded-[24px] border border-warm-gray-200 overflow-hidden">
-              <img src="/dashboard-2.png" alt="Power BI Dashboard 2" className="w-full object-cover max-h-80" />
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -158,12 +155,8 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeIn} className="mb-12">
             <p className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-3">Credentials & Recognition</p>
-            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">
-              Certified. Recognized. Accountable.
-            </h2>
-            <p className="mt-4 text-[1rem] font-light text-warm-gray-600 max-w-[480px] leading-relaxed">
-              Every credential here represents a deliberate investment in becoming sharper, more capable, and more useful to the principals I serve.
-            </p>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">Certified. Recognized. Accountable.</h2>
+            <p className="mt-4 text-[1rem] font-light text-warm-gray-600 max-w-[480px] leading-relaxed">Every credential here represents a deliberate investment in becoming sharper, more capable, and more useful to the principals I serve.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -173,32 +166,15 @@ export default function Portfolio() {
             <CertCard title="Commitment to Excellence" org="Office of the Special Assistant to the President" date="2021" />
             <CertCard title="Employee of the Month" org="Office of the Special Assistant to the President" date="2021" />
             <CertCard title="Team Player Award" org="Office of the Special Assistant to the President" date="2020" />
-            <CertCard title="I SERVE Leadership Award" org="Holy Cross of Davao College, Inc." date="2017" />
           </div>
-
-          <motion.div {...fadeIn} className="mt-6 relative bg-black rounded-[24px] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(184,146,42,0.2)_0%,transparent_70%)] pointer-events-none" />
-            <div className="relative z-10">
-              <p className="text-[0.72rem] tracking-[0.14em] uppercase text-gold mb-1">Currently Enrolled</p>
-              <h3 className="font-display text-2xl text-white tracking-tight">Juris Doctor (JD)</h3>
-              <p className="text-white/50 text-[0.88rem] mt-1">San Beda College Alabang — School of Law</p>
-            </div>
-            <div className="relative z-10 text-right shrink-0">
-              <span className="inline-block px-4 py-2 rounded-full bg-gold/20 text-gold text-sm font-medium">Expected 2028</span>
-            </div>
-          </motion.div>
         </div>
       </section>
 
       <section className="bg-off-white py-20 px-[5vw] border-t border-warm-gray-200">
         <motion.div {...fadeIn} className="max-w-2xl mx-auto text-center">
           <p className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-4">Interested?</p>
-          <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight text-black mb-4">
-            See the work in action.
-          </h2>
-          <p className="text-warm-gray-600 font-light leading-relaxed mb-8">
-            Want to see dashboard samples, hear an episode, or discuss how my background fits your needs? Lets talk.
-          </p>
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight text-black mb-4">See the work in action.</h2>
+          <p className="text-warm-gray-600 font-light leading-relaxed mb-8">Want to see dashboard samples, hear an episode, or discuss how my background fits your needs? Lets talk.</p>
           <a href="#contact" className="inline-flex items-center gap-2 bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gold transition-all duration-200">
             Get in Touch <ExternalLink size={16} />
           </a>
