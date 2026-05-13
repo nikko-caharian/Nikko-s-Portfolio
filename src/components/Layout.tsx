@@ -37,6 +37,11 @@ export default function Layout({ children }: LayoutProps) {
             </Link>
           </li>
           <li>
+            <Link to="/portfolio" className={`transition-colors ${location.pathname === "/portfolio" ? "text-gold font-medium" : "text-warm-gray-600 hover:text-black"}`}>
+              Portfolio
+            </Link>
+          </li>
+          <li>
             <a href="#contact" className="bg-black text-white px-5 py-2 rounded-full font-medium hover:bg-gold transition-all duration-300">
               Lets Talk
             </a>
@@ -62,6 +67,9 @@ export default function Layout({ children }: LayoutProps) {
             )}
             <Link to="/about" onClick={closeMenu} className={`text-base py-2 border-b border-warm-gray-100 transition-colors ${location.pathname === "/about" ? "text-gold font-medium" : "text-warm-gray-600 hover:text-black"}`}>
               About
+            </Link>
+            <Link to="/portfolio" onClick={closeMenu} className={`text-base py-2 border-b border-warm-gray-100 transition-colors ${location.pathname === "/portfolio" ? "text-gold font-medium" : "text-warm-gray-600 hover:text-black"}`}>
+              Portfolio
             </Link>
             <a href="#contact" onClick={closeMenu} className="mt-2 inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gold transition-all duration-300">
               Lets Talk <ArrowRight size={16} />
