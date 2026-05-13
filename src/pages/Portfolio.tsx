@@ -182,53 +182,35 @@ export default function Portfolio() {
             />
             <CertCard
               title="Servant Leadership Award"
-              org="Office of the President — Internal Recognition"
+              org="Office of the President — Presidential Action Center"
               date="2023"
             />
             <CertCard
-              title="Commitment to Excellence Award"
-              org="Office of the President — Internal Recognition"
-              date="2023"
+              title="Idea Type Contribution Award"
+              org="Office of the President - Presidential Action Center"
+              date="2022"
             />
             <CertCard
-              title="Google Data Analytics Professional Certificate"
-              org="Google via Coursera"
-              date="April 2026"
+              title="Commitment to Excellence"
+              org="Office of the Special Assistant to the President"
+              date="2021"
             />
             <CertCard
-              title="Google AI Essentials"
-              org="Google via Coursera"
-              date="March 2026"
+              title="Employee of the Month"
+              org="Office of the Special Assistant to the President"
+              date="2021"
             />
             <CertCard
-              title="Six Sigma Principles"
-              org="Kennesaw State University via Coursera"
-              date="April 2026"
+              title="Team Player Award"
+              org="Office of the Special Assistant to the President"
+              date="2020"
             />
             <CertCard
-              title="Strategic & Inclusive Leadership"
-              org="Johns Hopkins University via Coursera"
-              date="March 2026"
-            />
-            <CertCard
-              title="Career Service Professional Eligibility"
-              org="Civil Service Commission of the Philippines"
-              date="Permanent"
+              title="I SERVE Leadership Award"
+              org="Holy Cross of Davao College, Inc."
+              date="2017"
             />
           </div>
-
-          {/* JD Banner */}
-          <motion.div {...fadeIn} className="mt-6 relative bg-black rounded-[24px] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(184,146,42,0.2)_0%,transparent_70%)] pointer-events-none" />
-            <div className="relative z-10">
-              <p className="text-[0.72rem] tracking-[0.14em] uppercase text-gold mb-1">Currently Enrolled</p>
-              <h3 className="font-display text-2xl text-white tracking-tight">Juris Doctor (JD)</h3>
-              <p className="text-white/50 text-[0.88rem] mt-1">San Beda College Alabang — School of Law</p>
-            </div>
-            <div className="relative z-10 text-right shrink-0">
-              <span className="inline-block px-4 py-2 rounded-full bg-gold/20 text-gold text-sm font-medium">Expected 2028</span>
-            </div>
-          </motion.div>
         </div>
       </section>
 
