@@ -154,9 +154,9 @@ export default function Portfolio() {
       <section className="bg-white py-28 px-[5vw] border-t border-warm-gray-200">
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeIn} className="mb-12">
-            <p className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-3">Credentials & Recognition</p>
-            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">Certified. Recognized. Accountable.</h2>
-            <p className="mt-4 text-[1rem] font-light text-warm-gray-600 max-w-[480px] leading-relaxed">Every credential here represents a deliberate investment in becoming sharper, more capable, and more useful to the principals I serve.</p>
+            <p className="text-[0.75rem] font-medium tracking-[0.14em] uppercase text-gold mb-3">Awards & Recognition</p>
+            <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-black">Recognized for the work. Not the title.</h2>
+            <p className="mt-4 text-[1rem] font-light text-warm-gray-600 max-w-[480px] leading-relaxed">I did not pursue these. I pursued the Filipinos who needed someone in their corner — showing up with integrity, consistency, and the quiet conviction that genuine public service is its own reward. These are simply what institutions leave behind when they witness that kind of service up close. I am grateful for each one.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
